@@ -1,4 +1,5 @@
 import 'package:facebook_test/features/home/presentation/widgets/section_one.dart';
+import 'package:facebook_test/features/home/presentation/widgets/section_two.dart';
 import 'package:flutter/material.dart';
 import 'package:facebook_test/features/home/presentation/widgets/custom_app_bar.dart';
 
@@ -16,6 +17,9 @@ class HomeViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SectionOne(),
+          SizedBox(
+            height: 10,
+          ),
           Padding(
             padding: EdgeInsets.only(left: 15),
             child: Row(
@@ -38,6 +42,7 @@ class HomeViewBody extends StatelessWidget {
               ],
             ),
           ),
+          SectionTwo(),
         ],
       ),
     );
