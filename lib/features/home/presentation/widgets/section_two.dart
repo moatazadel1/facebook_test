@@ -1,5 +1,5 @@
-import 'package:facebook_test/features/home/presentation/widgets/custom_button_action.dart';
-import 'package:facebook_test/features/home/presentation/widgets/list_view_home_view.dart';
+import 'package:facebook_test/features/home/presentation/widgets/first_custom_button_action.dart';
+import 'package:facebook_test/features/home/presentation/widgets/first_list_view_home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -55,7 +55,7 @@ class SectionTwo extends StatelessWidget {
           ),
           const Row(
             children: [
-              CustomButtonAction(
+              FirstCustomButtonAction(
                 buttonColor: Color(0xffe5e4e9),
                 text: 'Joined',
                 iconOne: Icons.groups_2_rounded,
@@ -64,7 +64,7 @@ class SectionTwo extends StatelessWidget {
               SizedBox(
                 width: 10,
               ),
-              CustomButtonAction(
+              FirstCustomButtonAction(
                 buttonColor: Colors.blue,
                 text: 'Invite',
                 textColor: Colors.white,
@@ -76,7 +76,9 @@ class SectionTwo extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const ListViewHomeView(),
+          const FirstListViewHomeView(
+            color: Color(0xffe5e4e9),
+          ),
         ],
       ),
     );

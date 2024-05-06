@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomButtonAction extends StatelessWidget {
+class FirstCustomButtonAction extends StatelessWidget {
   final Color? buttonColor;
   final IconData iconOne;
   final IconData? iconTwo;
@@ -8,7 +8,7 @@ class CustomButtonAction extends StatelessWidget {
   final Color? iconOneColor;
 
   final String text;
-  const CustomButtonAction({
+  const FirstCustomButtonAction({
     super.key,
     required this.buttonColor,
     required this.text,

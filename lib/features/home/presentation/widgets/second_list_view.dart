@@ -1,10 +1,12 @@
 import 'package:facebook_test/core/section_data.dart';
-import 'package:facebook_test/features/home/presentation/widgets/custom_sub_button_action.dart';
+import 'package:facebook_test/features/home/presentation/widgets/third_custom_button_action.dart';
 import 'package:flutter/material.dart';
 
-class ListViewHomeView extends StatelessWidget {
-  const ListViewHomeView({
+class SecondListViewHomeView extends StatelessWidget {
+  final Color? color;
+  const SecondListViewHomeView({
     super.key,
+    required this.color,
   });
 
   @override
@@ -13,16 +15,19 @@ class ListViewHomeView extends StatelessWidget {
       height: 45,
       child: ListView.builder(
         physics: const BouncingScrollPhysics(),
-        itemCount: titles.length,
+        itemCount: titles2.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          final title = titles[index];
-          final isYouTitle = title == 'You';
+          final title = titles2[index];
+          final icon = icons2[index];
+          final iconColor = iconColors[index];
           return Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: CustomSubButtonAction(
+            child: ThirdCustomButtonAction(
+              iconColor: iconColor,
+              icon: icon,
               title: title,
-              showCircleAvatar: isYouTitle,
+              color: color,
             ),
           );
         },
